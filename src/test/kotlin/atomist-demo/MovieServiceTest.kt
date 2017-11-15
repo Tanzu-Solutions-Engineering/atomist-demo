@@ -1,4 +1,4 @@
-package atomist-demo
+package atomistdemo
 
 import org.junit.Test
 

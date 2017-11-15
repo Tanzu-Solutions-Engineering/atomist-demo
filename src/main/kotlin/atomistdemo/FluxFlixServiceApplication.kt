@@ -1,4 +1,4 @@
-package atomist-demo
+package atomistdemo
 
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.SpringApplication
@@ -30,7 +30,7 @@ class FluxFlixServiceApplication {
 
     @Bean
     fun runner(mr: MovieRepository) = ApplicationRunner {
-        val movies = Flux.just("Silence of the Lambdas", "AEon Flux", "Back to the Future")
+        val movies = Flux.just("Thor - Ragnorak", "AEon Flux", "Back to the Future")
                 .flatMap { mr.save(Movie(title = it)) }
         mr
                 .deleteAll()
